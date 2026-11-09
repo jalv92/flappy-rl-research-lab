@@ -1,0 +1,338 @@
+[
+ {
+  "id": 122,
+  "purpose": "periodic",
+  "split": "validation",
+  "scenario": "default",
+  "step": 10000,
+  "n": 16,
+  "max_score": 200,
+  "mean": 0.0,
+  "median": 0.0,
+  "max": 0.0,
+  "min": 0.0,
+  "std": 0.0,
+  "success": {
+   "10": 0.0,
+   "25": 0.0,
+   "50": 0.0,
+   "100": 0.0
+  },
+  "created_at": 1794255792.377977
+ },
+ {
+  "id": 125,
+  "purpose": "periodic",
+  "split": "validation",
+  "scenario": "default",
+  "step": 20000,
+  "n": 16,
+  "max_score": 200,
+  "mean": 0.0,
+  "median": 0.0,
+  "max": 0.0,
+  "min": 0.0,
+  "std": 0.0,
+  "success": {
+   "10": 0.0,
+   "25": 0.0,
+   "50": 0.0,
+   "100": 0.0
+  },
+  "created_at": 1794255793.711753
+ },
+ {
+  "id": 127,
+  "purpose": "periodic",
+  "split": "validation",
+  "scenario": "default",
+  "step": 30000,
+  "n": 16,
+  "max_score": 200,
+  "mean": 0.0,
+  "median": 0.0,
+  "max": 0.0,
+  "min": 0.0,
+  "std": 0.0,
+  "success": {
+   "10": 0.0,
+   "25": 0.0,
+   "50": 0.0,
+   "100": 0.0
+  },
+  "created_at": 1794255794.9455845
+ },
+ {
+  "id": 130,
+  "purpose": "periodic",
+  "split": "validation",
+  "scenario": "default",
+  "step": 40000,
+  "n": 16,
+  "max_score": 200,
+  "mean": 3.0,
+  "median": 1.0,
+  "max": 16.0,
+  "min": 0.0,
+  "std": 4.4860896112315904,
+  "success": {
+   "10": 0.125,
+   "25": 0.0,
+   "50": 0.0,
+   "100": 0.0
+  },
+  "created_at": 1794255796.281955
+ },
+ {
+  "id": 133,
+  "purpose": "periodic",
+  "split": "validation",
+  "scenario": "default",
+  "step": 50000,
+  "n": 16,
+  "max_score": 200,
+  "mean": 40.3125,
+  "median": 29.5,
+  "max": 150.0,
+  "min": 4.0,
+  "std": 40.411506328643576,
+  "success": {
+   "10": 0.6875,
+   "25": 0.625,
+   "50": 0.25,
+   "100": 0.125
+  },
+  "created_at": 1794255798.0883892
+ },
+ {
+  "id": 137,
+  "purpose": "periodic",
+  "split": "validation",
+  "scenario": "default",
+  "step": 60000,
+  "n": 16,
+  "max_score": 200,
+  "mean": 200.0,
+  "median": 200.0,
+  "max": 200.0,
+  "min": 200.0,
+  "std": 0.0,
+  "success": {
+   "10": 1.0,
+   "25": 1.0,
+   "50": 1.0,
+   "100": 1.0
+  },
+  "created_at": 1794255800.347256
+ },
+ {
+  "id": 140,
+  "purpose": "periodic",
+  "split": "validation",
+  "scenario": "default",
+  "step": 70000,
+  "n": 16,
+  "max_score": 200,
+  "mean": 173.875,
+  "median": 200.0,
+  "max": 200.0,
+  "min": 44.0,
+  "std": 51.471928028780894,
+  "success": {
+   "10": 1.0,
+   "25": 1.0,
+   "50": 0.9375,
+   "100": 0.875
+  },
+  "created_at": 1794255802.5973928
+ },
+ {
+  "id": 143,
+  "purpose": "periodic",
+  "split": "validation",
+  "scenario": "default",
+  "step": 80000,
+  "n": 16,
+  "max_score": 200,
+  "mean": 200.0,
+  "median": 200.0,
+  "max": 200.0,
+  "min": 200.0,
+  "std": 0.0,
+  "success": {
+   "10": 1.0,
+   "25": 1.0,
+   "50": 1.0,
+   "100": 1.0
+  },
+  "created_at": 1794255804.7990906
+ },
+ {
+  "id": 147,
+  "purpose": "periodic",
+  "split": "validation",
+  "scenario": "default",
+  "step": 90000,
+  "n": 16,
+  "max_score": 200,
+  "mean": 183.8125,
+  "median": 200.0,
+  "max": 200.0,
+  "min": 88.0,
+  "std": 36.34937886333135,
+  "success": {
+   "10": 1.0,
+   "25": 1.0,
+   "50": 1.0,
+   "100": 0.875
+  },
+  "created_at": 1794255806.919216
+ },
+ {
+  "id": 152,
+  "purpose": "periodic",
+  "split": "validation",
+  "scenario": "default",
+  "step": 100000,
+  "n": 16,
+  "max_score": 200,
+  "mean": 196.0,
+  "median": 200.0,
+  "max": 200.0,
+  "min": 158.0,
+  "std": 11.157956802210698,
+  "success": {
+   "10": 1.0,
+   "25": 1.0,
+   "50": 1.0,
+   "100": 1.0
+  },
+  "created_at": 1794255809.3913307
+ },
+ {
+  "id": 155,
+  "purpose": "periodic",
+  "split": "validation",
+  "scenario": "default",
+  "step": 110000,
+  "n": 16,
+  "max_score": 200,
+  "mean": 200.0,
+  "median": 200.0,
+  "max": 200.0,
+  "min": 200.0,
+  "std": 0.0,
+  "success": {
+   "10": 1.0,
+   "25": 1.0,
+   "50": 1.0,
+   "100": 1.0
+  },
+  "created_at": 1794255811.6089106
+ },
+ {
+  "id": 159,
+  "purpose": "periodic",
+  "split": "validation",
+  "scenario": "default",
+  "step": 120000,
+  "n": 16,
+  "max_score": 200,
+  "mean": 200.0,
+  "median": 200.0,
+  "max": 200.0,
+  "min": 200.0,
+  "std": 0.0,
+  "success": {
+   "10": 1.0,
+   "25": 1.0,
+   "50": 1.0,
+   "100": 1.0
+  },
+  "created_at": 1794255813.961824
+ },
+ {
+  "id": 162,
+  "purpose": "periodic",
+  "split": "validation",
+  "scenario": "default",
+  "step": 130000,
+  "n": 16,
+  "max_score": 200,
+  "mean": 200.0,
+  "median": 200.0,
+  "max": 200.0,
+  "min": 200.0,
+  "std": 0.0,
+  "success": {
+   "10": 1.0,
+   "25": 1.0,
+   "50": 1.0,
+   "100": 1.0
+  },
+  "created_at": 1794255816.2672694
+ },
+ {
+  "id": 166,
+  "purpose": "periodic",
+  "split": "validation",
+  "scenario": "default",
+  "step": 140000,
+  "n": 16,
+  "max_score": 200,
+  "mean": 200.0,
+  "median": 200.0,
+  "max": 200.0,
+  "min": 200.0,
+  "std": 0.0,
+  "success": {
+   "10": 1.0,
+   "25": 1.0,
+   "50": 1.0,
+   "100": 1.0
+  },
+  "created_at": 1794255818.4975767
+ },
+ {
+  "id": 170,
+  "purpose": "periodic",
+  "split": "validation",
+  "scenario": "default",
+  "step": 150000,
+  "n": 16,
+  "max_score": 200,
+  "mean": 200.0,
+  "median": 200.0,
+  "max": 200.0,
+  "min": 200.0,
+  "std": 0.0,
+  "success": {
+   "10": 1.0,
+   "25": 1.0,
+   "50": 1.0,
+   "100": 1.0
+  },
+  "created_at": 1794255820.8708048
+ },
+ {
+  "id": 172,
+  "purpose": "final",
+  "split": "validation",
+  "scenario": "default",
+  "step": 150000,
+  "n": 50,
+  "max_score": 200,
+  "mean": 200.0,
+  "median": 200.0,
+  "max": 200.0,
+  "min": 200.0,
+  "std": 0.0,
+  "success": {
+   "10": 1.0,
+   "25": 1.0,
+   "50": 1.0,
+   "100": 1.0
+  },
+  "created_at": 1794255822.7565098
+ }
+]

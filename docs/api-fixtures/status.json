@@ -1,0 +1,234 @@
+{
+ "time": 1794256301.364896,
+ "research": {
+  "status": "running",
+  "session": {
+   "id": 1,
+   "profile": "full_research",
+   "objective": "Reduce the catastrophic degradation and seed variance of the DQN control at 150k steps",
+   "budgets": {
+    "max_concurrent": 4,
+    "max_memory_mb": 4096,
+    "max_gpu_mem_mb": 2048,
+    "max_disk_mb": 5120,
+    "run_wall_seconds": 1800,
+    "early_stop_patience": 0,
+    "checkpoint_every": 25000,
+    "description": "Screening plus follow-up stages for hypotheses that earn them.",
+    "steps": 150000,
+    "seeds": 5,
+    "eval_every": 10000,
+    "eval_episodes": 16,
+    "max_experiments": 5,
+    "session_wall_seconds": 7200,
+    "confirm": true
+   },
+   "status": "running",
+   "control": "run",
+   "pid": 156913,
+   "started_at": 1794255999.5750318,
+   "finished_at": null,
+   "experiments_done": 2,
+   "notes": "exp 1 H002 [screening] -> inconclusive\nexp 2 H007 [screening] -> inconclusive",
+   "error": null
+  },
+  "active_experiment": {
+   "id": 3,
+   "session_id": 1,
+   "hypothesis_id": "H001",
+   "stage": "screening",
+   "profile": "full_research",
+   "status": "running",
+   "config": {
+    "variant": "double",
+    "stage": "screening",
+    "steps": 150000,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "eval_every": 10000,
+    "eval_episodes": 16,
+    "observations": {
+     "weaknesses": [
+      {
+       "name": "instability",
+       "severity": 3.4,
+       "evidence": "3.4 catastrophic validation drops per run"
+      },
+      {
+       "name": "seed_variance",
+       "severity": 1.4390526551160545,
+       "evidence": "final-policy mean varies across seeds (CV 0.72)"
+      },
+      {
+       "name": "sample_efficiency",
+       "severity": 1.3635166666666665,
+       "evidence": "validation AUC 0.33 vs reference 0.67"
+      },
+      {
+       "name": "generalization",
+       "severity": 1.0,
+       "evidence": "OOD mean 126 vs in-distribution 200"
+      },
+      {
+       "name": "final_performance",
+       "severity": 0.76108,
+       "evidence": "final-policy mean 124 of cap 200"
+      }
+     ],
+     "evidence": {
+      "control_group": "f705b28ee44873aa",
+      "total_steps": 150000,
+      "n_seeds": 5,
+      "final_mean": 123.89200000000001,
+      "auc": 0.33224166666666666,
+      "seed_cv": 0.7195263275580273,
+      "degradations_mean": 3.4,
+      "ppo_auc": 0.6731208333333333,
+      "ppo_final_mean": 188.272
+     },
+     "note": null
+    },
+    "reason": "targets observed weakness(es): instability, final_performance",
+    "variant_source_sha": "1b838107de21",
+    "arms": {
+     "control": [
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "candidate": [
+      29,
+      30,
+      31,
+      32,
+      33
+     ]
+    },
+    "reused": [
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "code_version": "2ae67e4",
+   "started_at": 1794256211.0322201,
+   "finished_at": null,
+   "result": null,
+   "decision": null,
+   "conclusion": null,
+   "error": null,
+   "report_path": null,
+   "hypothesis_title": "Double-DQN targets reduce value overestimation and the collapses it causes"
+  }
+ },
+ "training": {
+  "active_runs": [
+   {
+    "id": 29,
+    "algo": "xdqn",
+    "variant": "double",
+    "seed": 0,
+    "status": "running",
+    "steps": 122000,
+    "total_steps": 150000,
+    "experiment_id": 3,
+    "arm": "candidate"
+   },
+   {
+    "id": 30,
+    "algo": "xdqn",
+    "variant": "double",
+    "seed": 1,
+    "status": "running",
+    "steps": 119000,
+    "total_steps": 150000,
+    "experiment_id": 3,
+    "arm": "candidate"
+   },
+   {
+    "id": 31,
+    "algo": "xdqn",
+    "variant": "double",
+    "seed": 2,
+    "status": "running",
+    "steps": 124000,
+    "total_steps": 150000,
+    "experiment_id": 3,
+    "arm": "candidate"
+   },
+   {
+    "id": 32,
+    "algo": "xdqn",
+    "variant": "double",
+    "seed": 3,
+    "status": "running",
+    "steps": 123000,
+    "total_steps": 150000,
+    "experiment_id": 3,
+    "arm": "candidate"
+   }
+  ],
+  "max_concurrent": 4
+ },
+ "totals": {
+  "experiments_completed": 2,
+  "experiments_failed": 0,
+  "runs_completed": 28,
+  "training_steps": 4247000,
+  "models": 32,
+  "matches": 5,
+  "held_out_test_uses": 3
+ },
+ "best_verified_model": {
+  "id": "ppo-r8",
+  "algo": "ppo",
+  "variant": null,
+  "train_steps": 150000,
+  "status": "promoted",
+  "evidence": {
+   "test_eval_id": 248,
+   "test_mean": 200.0,
+   "ood_mean": 126.89333333333333,
+   "replaced": "dqn-r3"
+  }
+ },
+ "best_score": 200.0,
+ "resources": {
+  "cpu_percent": 0.0,
+  "cpu_count": 28,
+  "ram_used_mb": 4760.41796875,
+  "ram_total_mb": 15851.13671875,
+  "gpu": {
+   "name": "NVIDIA GeForce RTX 4070 Ti SUPER",
+   "utilization_percent": 6.0,
+   "memory_used_mb": 3753.0,
+   "memory_total_mb": 16376.0
+  },
+  "disk_used_mb": 3.3703107833862305,
+  "disk_limit_mb": 5120,
+  "device_benchmark": {
+   "cpu": 1113.6,
+   "cuda": 502.6,
+   "chosen": "cpu",
+   "unit": "DQN update+act iterations/s (batch 128, MLP 128x128, 1 torch thread)"
+  }
+ },
+ "limits": {
+  "max_concurrent": 4,
+  "max_memory_mb": 4096,
+  "max_gpu_mem_mb": 2048,
+  "max_disk_mb": 5120,
+  "run_wall_seconds": 1800,
+  "early_stop_patience": 0,
+  "checkpoint_every": 25000
+ }
+}

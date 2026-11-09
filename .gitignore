@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+tmp/
+.env
+# machine-local research artifacts (reproducible from configs + seeds)
+experiments/*
+!experiments/.gitkeep
+checkpoints/*
+!checkpoints/.gitkeep

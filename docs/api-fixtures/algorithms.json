@@ -1,0 +1,210 @@
+{
+ "algorithms": [
+  {
+   "id": "dqn",
+   "name": "DQN (Stable-Baselines3 baseline)",
+   "kind": "baseline",
+   "default_hyperparameters": {
+    "n_envs": 8,
+    "net_arch": [
+     128,
+     128
+    ],
+    "learning_rate": 0.0005,
+    "buffer_size": 100000,
+    "learning_starts": 2000,
+    "batch_size": 128,
+    "gamma": 0.99,
+    "train_freq": 1,
+    "gradient_steps": 2,
+    "target_update_interval": 1000,
+    "exploration_fraction": 0.2,
+    "exploration_final_eps": 0.02
+   },
+   "supports_variants": false
+  },
+  {
+   "id": "ppo",
+   "name": "PPO (Stable-Baselines3 baseline)",
+   "kind": "baseline",
+   "default_hyperparameters": {
+    "n_envs": 8,
+    "net_arch": [
+     64,
+     64
+    ],
+    "learning_rate": 0.0003,
+    "n_steps": 256,
+    "batch_size": 256,
+    "n_epochs": 10,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5
+   },
+   "supports_variants": false
+  },
+  {
+   "id": "xdqn",
+   "name": "In-house DQN (control for experimental variants)",
+   "kind": "baseline",
+   "default_hyperparameters": {
+    "n_envs": 8,
+    "buffer_size": 100000,
+    "batch_size": 128,
+    "gamma": 0.99,
+    "lr": 0.0005,
+    "learning_starts": 2000,
+    "train_freq": 4,
+    "target_update": 1000,
+    "eps_start": 1.0,
+    "eps_end": 0.02,
+    "eps_fraction": 0.2,
+    "hidden": [
+     128,
+     128
+    ],
+    "max_grad_norm": 10.0,
+    "extra": {}
+   },
+   "supports_variants": true
+  }
+ ],
+ "variants": [
+  {
+   "id": "control",
+   "hypothesis": null,
+   "is_control": true
+  },
+  {
+   "id": "double",
+   "hypothesis": {
+    "id": "H001",
+    "variant": "double",
+    "title": "Double-DQN targets reduce value overestimation and the collapses it causes",
+    "area": "loss_and_update_rules",
+    "status": "proposed",
+    "novelty": "known"
+   },
+   "is_control": false
+  },
+  {
+   "id": "nstep",
+   "hypothesis": {
+    "id": "H003",
+    "variant": "nstep",
+    "title": "3-step returns propagate the sparse obstacle reward faster",
+    "area": "hybrid_methods",
+    "status": "proposed",
+    "novelty": "known"
+   },
+   "is_control": false
+  },
+  {
+   "id": "per",
+   "hypothesis": {
+    "id": "H006",
+    "variant": "per",
+    "title": "Prioritising high-TD-error transitions speeds up learning of rare events",
+    "area": "experience_replay",
+    "status": "proposed",
+    "novelty": "known"
+   },
+   "is_control": false
+  },
+  {
+   "id": "softtarget",
+   "hypothesis": {
+    "id": "H002",
+    "variant": "softtarget",
+    "title": "Polyak-averaged targets smooth the moving target and stabilise late training",
+    "area": "loss_and_update_rules",
+    "status": "inconclusive",
+    "novelty": "known"
+   },
+   "is_control": false
+  },
+  {
+   "id": "dueling",
+   "hypothesis": {
+    "id": "H009",
+    "variant": "dueling",
+    "title": "Dueling heads learn state value where the action rarely matters",
+    "area": "policy_architectures",
+    "status": "proposed",
+    "novelty": "known"
+   },
+   "is_control": false
+  },
+  {
+   "id": "aux_dynamics",
+   "hypothesis": {
+    "id": "H008",
+    "variant": "aux_dynamics",
+    "title": "An auxiliary forward-dynamics loss shapes features before reward arrives",
+    "area": "predictive_learning",
+    "status": "proposed",
+    "novelty": "known"
+   },
+   "is_control": false
+  },
+  {
+   "id": "prior_explore",
+   "hypothesis": {
+    "id": "H005",
+    "variant": "prior_explore",
+    "title": "Drawing exploratory actions from a survivor action prior instead of uniformly",
+    "area": "exploration",
+    "status": "proposed",
+    "novelty": "unverified"
+   },
+   "is_control": false
+  },
+  {
+   "id": "collapse_guard",
+   "hypothesis": {
+    "id": "H004",
+    "variant": "collapse_guard",
+    "title": "Rolling back to the best snapshot and halving the learning rate when training collapses",
+    "area": "adaptive_schedules",
+    "status": "proposed",
+    "novelty": "unverified"
+   },
+   "is_control": false
+  },
+  {
+   "id": "crash_focus",
+   "hypothesis": {
+    "id": "H007",
+    "variant": "crash_focus",
+    "title": "Oversampling the last steps before a crash teaches obstacle avoidance sooner",
+    "area": "experience_replay",
+    "status": "inconclusive",
+    "novelty": "unverified"
+   },
+   "is_control": false
+  }
+ ],
+ "variant_composition": "join variant ids with '+' (e.g. 'double+nstep') to train a hybrid",
+ "thresholds": [
+  10,
+  25,
+  50,
+  100
+ ],
+ "scenarios": {
+  "in_distribution": [
+   "default"
+  ],
+  "ood": [
+   "narrow_gap",
+   "wide_spacing",
+   "tight_spacing",
+   "fast",
+   "slow",
+   "hard_combo"
+  ]
+ }
+}

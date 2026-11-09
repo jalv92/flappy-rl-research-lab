@@ -1,0 +1,41 @@
+{
+ "weaknesses": [
+  {
+   "name": "instability",
+   "severity": 3.4,
+   "evidence": "3.4 catastrophic validation drops per run"
+  },
+  {
+   "name": "seed_variance",
+   "severity": 1.4390526551160545,
+   "evidence": "final-policy mean varies across seeds (CV 0.72)"
+  },
+  {
+   "name": "sample_efficiency",
+   "severity": 1.3635166666666665,
+   "evidence": "validation AUC 0.33 vs reference 0.67"
+  },
+  {
+   "name": "generalization",
+   "severity": 1.0,
+   "evidence": "OOD mean 126 vs in-distribution 200"
+  },
+  {
+   "name": "final_performance",
+   "severity": 0.76108,
+   "evidence": "final-policy mean 124 of cap 200"
+  }
+ ],
+ "evidence": {
+  "control_group": "f705b28ee44873aa",
+  "total_steps": 150000,
+  "n_seeds": 5,
+  "final_mean": 123.89200000000001,
+  "auc": 0.33224166666666666,
+  "seed_cv": 0.7195263275580273,
+  "degradations_mean": 3.4,
+  "ppo_auc": 0.6731208333333333,
+  "ppo_final_mean": 188.272
+ },
+ "note": null
+}

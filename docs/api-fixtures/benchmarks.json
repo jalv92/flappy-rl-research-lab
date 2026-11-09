@@ -1,0 +1,20 @@
+{
+ "benchmarks": [
+  {
+   "env_version": "FlapLab-v1/engine1/obs1",
+   "total_steps": 150000,
+   "runs": 25,
+   "groups": 5
+  }
+ ],
+ "metrics": {
+  "final_mean": "Mean validation score of the final policy (50 episodes), averaged over seeds",
+  "best_mean": "Best periodic validation mean during training, averaged over seeds",
+  "auc": "Normalised area under the validation learning curve (sample efficiency)",
+  "steps_to_25": "Median environment steps to reach validation mean >= 25 (lower is better)",
+  "steps_to_50": "Median environment steps to reach validation mean >= 50 (lower is better)",
+  "steps_to_100": "Median environment steps to reach validation mean >= 100 (lower is better)",
+  "test_mean": "Held-out test mean (confirmatory evaluations only)",
+  "ood_mean": "Mean over out-of-distribution test scenarios (confirmatory evaluations only)"
+ }
+}

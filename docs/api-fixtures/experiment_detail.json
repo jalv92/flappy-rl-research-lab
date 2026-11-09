@@ -1,0 +1,182 @@
+{
+ "id": 3,
+ "session_id": 1,
+ "hypothesis_id": "H001",
+ "stage": "screening",
+ "profile": "full_research",
+ "status": "running",
+ "config": {
+  "variant": "double",
+  "stage": "screening",
+  "steps": 150000,
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "eval_every": 10000,
+  "eval_episodes": 16,
+  "observations": {
+   "weaknesses": [
+    {
+     "name": "instability",
+     "severity": 3.4,
+     "evidence": "3.4 catastrophic validation drops per run"
+    },
+    {
+     "name": "seed_variance",
+     "severity": 1.4390526551160545,
+     "evidence": "final-policy mean varies across seeds (CV 0.72)"
+    },
+    {
+     "name": "sample_efficiency",
+     "severity": 1.3635166666666665,
+     "evidence": "validation AUC 0.33 vs reference 0.67"
+    },
+    {
+     "name": "generalization",
+     "severity": 1.0,
+     "evidence": "OOD mean 126 vs in-distribution 200"
+    },
+    {
+     "name": "final_performance",
+     "severity": 0.76108,
+     "evidence": "final-policy mean 124 of cap 200"
+    }
+   ],
+   "evidence": {
+    "control_group": "f705b28ee44873aa",
+    "total_steps": 150000,
+    "n_seeds": 5,
+    "final_mean": 123.89200000000001,
+    "auc": 0.33224166666666666,
+    "seed_cv": 0.7195263275580273,
+    "degradations_mean": 3.4,
+    "ppo_auc": 0.6731208333333333,
+    "ppo_final_mean": 188.272
+   },
+   "note": null
+  },
+  "reason": "targets observed weakness(es): instability, final_performance",
+  "variant_source_sha": "1b838107de21",
+  "arms": {
+   "control": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "candidate": [
+    29,
+    30,
+    31,
+    32,
+    33
+   ]
+  },
+  "reused": [
+   11,
+   12,
+   13,
+   14,
+   15
+  ]
+ },
+ "code_version": "2ae67e4",
+ "started_at": 1794256211.0322201,
+ "finished_at": null,
+ "result": null,
+ "decision": null,
+ "conclusion": null,
+ "error": null,
+ "report_path": null,
+ "hypothesis": {
+  "id": "H001",
+  "title": "Double-DQN targets reduce value overestimation and the collapses it causes",
+  "area": "loss_and_update_rules",
+  "motivation": "The control's validation curves reach the score cap and then fall back to near zero. Max-operator overestimation is a classic driver of such Q-value blow-ups.",
+  "modification": "Select the bootstrap action with the online network and evaluate it with the target network.",
+  "expected_benefit": "Fewer catastrophic degradations and a higher final-policy mean at equal steps.",
+  "failure_modes": "With only two actions and sparse rewards the overestimation bias may be small; no effect.",
+  "criteria": "Primary: validation AUC (sample efficiency) and final-policy validation mean, per training seed, candidate vs control. Promising only if a 95% bootstrap CI of the difference excludes 0 in the favourable direction and no primary metric is significantly worse. Secondary: degradation count, seed CV, wall-clock ratio.",
+  "baseline": "xdqn control: identical hyperparameters, step budget, seeds and evaluation schedule",
+  "budget": {
+   "steps": 150000,
+   "seeds": 5
+  },
+  "variant": "double",
+  "prior_work": "van Hasselt, Guez & Silver 2016 (Double DQN).",
+  "novelty": "known",
+  "targets": "instability,final_performance",
+  "status": "proposed",
+  "source": "claude-code-session-2026-11-09",
+  "created_at": 1794255998.249239,
+  "updated_at": 1794256211.0511148
+ },
+ "report_markdown": null,
+ "runs": [
+  {
+   "id": 29,
+   "arm": "candidate",
+   "variant": "double",
+   "seed": 0,
+   "status": "running",
+   "steps": 122000,
+   "total_steps": 150000,
+   "wall_seconds": 38.912174224853516,
+   "model_id": "xdqn-double-r29",
+   "error": null
+  },
+  {
+   "id": 30,
+   "arm": "candidate",
+   "variant": "double",
+   "seed": 1,
+   "status": "running",
+   "steps": 119000,
+   "total_steps": 150000,
+   "wall_seconds": 38.27288317680359,
+   "model_id": "xdqn-double-r30",
+   "error": null
+  },
+  {
+   "id": 31,
+   "arm": "candidate",
+   "variant": "double",
+   "seed": 2,
+   "status": "running",
+   "steps": 124000,
+   "total_steps": 150000,
+   "wall_seconds": 39.095417499542236,
+   "model_id": "xdqn-double-r31",
+   "error": null
+  },
+  {
+   "id": 32,
+   "arm": "candidate",
+   "variant": "double",
+   "seed": 3,
+   "status": "running",
+   "steps": 123000,
+   "total_steps": 150000,
+   "wall_seconds": 38.82983899116516,
+   "model_id": "xdqn-double-r32",
+   "error": null
+  },
+  {
+   "id": 33,
+   "arm": "candidate",
+   "variant": "double",
+   "seed": 4,
+   "status": "queued",
+   "steps": 0,
+   "total_steps": 150000,
+   "wall_seconds": 0.0,
+   "model_id": null,
+   "error": null
+  }
+ ]
+}

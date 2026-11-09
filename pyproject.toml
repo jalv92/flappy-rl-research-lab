@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flappy-rl-research-lab"
+version = "0.1.0"
+description = "Flap-through-gaps arcade game + bounded autonomous RL research lab"
+requires-python = ">=3.11"
+license = "MIT"
+readme = "README.md"
+dependencies = [
+    "torch>=2.4",
+    "numpy>=1.26",
+    "gymnasium>=1.0",
+    "stable-baselines3>=2.4",
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "psutil>=5.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "httpx>=0.27"]
+
+[tool.setuptools.packages.find]
+include = ["backend*", "scripts*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+markers = ["slow: real (short) training runs"]
+filterwarnings = ["ignore::DeprecationWarning", "ignore::UserWarning"]

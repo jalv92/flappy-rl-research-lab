@@ -1,0 +1,32 @@
+{
+ "human": {
+  "games": 2,
+  "best": {
+   "normal": 1
+  },
+  "vs_ai": {
+   "wins": 0,
+   "losses": 1,
+   "draws": 0
+  }
+ },
+ "head_to_head": [
+  {
+   "a": "human",
+   "b": "ppo-r9",
+   "wins_a": 0,
+   "wins_b": 1,
+   "draws": 0,
+   "n": 1
+  },
+  {
+   "a": "ppo-r9",
+   "b": "xdqn-crash_focus-r22",
+   "wins_a": 4,
+   "wins_b": 0,
+   "draws": 0,
+   "n": 4
+  }
+ ],
+ "total": 8
+}

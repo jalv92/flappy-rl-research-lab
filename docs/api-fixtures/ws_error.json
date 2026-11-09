@@ -1,0 +1,9 @@
+[
+ {
+  "dir": "server",
+  "msg": {
+   "type": "error",
+   "message": "unknown model does-not-exist"
+  }
+ }
+]

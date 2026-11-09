@@ -1,0 +1,32 @@
+[
+ {
+  "id": 1,
+  "profile": "full_research",
+  "objective": "Reduce the catastrophic degradation and seed variance of the DQN control at 150k steps",
+  "budgets": {
+   "max_concurrent": 4,
+   "max_memory_mb": 4096,
+   "max_gpu_mem_mb": 2048,
+   "max_disk_mb": 5120,
+   "run_wall_seconds": 1800,
+   "early_stop_patience": 0,
+   "checkpoint_every": 25000,
+   "description": "Screening plus follow-up stages for hypotheses that earn them.",
+   "steps": 150000,
+   "seeds": 5,
+   "eval_every": 10000,
+   "eval_episodes": 16,
+   "max_experiments": 5,
+   "session_wall_seconds": 7200,
+   "confirm": true
+  },
+  "status": "running",
+  "control": "run",
+  "pid": 156913,
+  "started_at": 1794255999.5750318,
+  "finished_at": null,
+  "experiments_done": 2,
+  "notes": "exp 1 H002 [screening] -> inconclusive\nexp 2 H007 [screening] -> inconclusive",
+  "error": null
+ }
+]

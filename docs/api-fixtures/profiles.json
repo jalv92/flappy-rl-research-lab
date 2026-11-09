@@ -1,0 +1,119 @@
+{
+ "limits": {
+  "max_concurrent": 4,
+  "max_memory_mb": 4096,
+  "max_gpu_mem_mb": 2048,
+  "max_disk_mb": 5120,
+  "run_wall_seconds": 1800,
+  "early_stop_patience": 0,
+  "checkpoint_every": 25000
+ },
+ "profiles": {
+  "quick_smoke": {
+   "description": "Wiring check: one tiny experiment. Not evidence of anything.",
+   "steps": 4000,
+   "seeds": 2,
+   "eval_every": 2000,
+   "eval_episodes": 4,
+   "max_experiments": 1,
+   "session_wall_seconds": 600,
+   "confirm": false,
+   "record_status": false
+  },
+  "baseline_benchmark": {
+   "description": "Reference curves for DQN, PPO and the xdqn control.",
+   "steps": 150000,
+   "seeds": 5,
+   "eval_every": 10000,
+   "eval_episodes": 16,
+   "max_experiments": 0,
+   "session_wall_seconds": 3600,
+   "confirm": false
+  },
+  "experimental_screening": {
+   "description": "Cheap exploratory screening of untested hypotheses (3 seeds). Exploratory only.",
+   "steps": 100000,
+   "seeds": 3,
+   "eval_every": 10000,
+   "eval_episodes": 16,
+   "max_experiments": 4,
+   "session_wall_seconds": 3600,
+   "confirm": false
+  },
+  "full_research": {
+   "description": "Screening plus follow-up stages for hypotheses that earn them.",
+   "steps": 150000,
+   "seeds": 5,
+   "eval_every": 10000,
+   "eval_episodes": 16,
+   "max_experiments": 8,
+   "session_wall_seconds": 7200,
+   "confirm": true
+  },
+  "final_confirmation": {
+   "description": "Confirmatory runs only: fresh seeds, full budget, held-out test and out-of-distribution scenarios.",
+   "steps": 150000,
+   "seeds": 8,
+   "eval_every": 10000,
+   "eval_episodes": 16,
+   "max_experiments": 2,
+   "session_wall_seconds": 7200,
+   "confirm": true,
+   "confirm_only": true
+  }
+ },
+ "overridable": {
+  "max_experiments": {
+   "min": 0,
+   "max": 50
+  },
+  "steps": {
+   "min": 1000,
+   "max": 2000000
+  },
+  "seeds": {
+   "min": 1,
+   "max": 16
+  },
+  "session_wall_seconds": {
+   "min": 30,
+   "max": 86400
+  },
+  "max_concurrent": {
+   "min": 1,
+   "max": 16
+  },
+  "max_memory_mb": {
+   "min": 512,
+   "max": 32768
+  },
+  "max_gpu_mem_mb": {
+   "min": 256,
+   "max": 12288
+  },
+  "max_disk_mb": {
+   "min": 256,
+   "max": 102400
+  },
+  "run_wall_seconds": {
+   "min": 30,
+   "max": 86400
+  },
+  "eval_every": {
+   "min": 500,
+   "max": 1000000
+  },
+  "eval_episodes": {
+   "min": 2,
+   "max": 200
+  },
+  "early_stop_patience": {
+   "min": 0,
+   "max": 100
+  },
+  "checkpoint_every": {
+   "min": 500,
+   "max": 5000000
+  }
+ }
+}

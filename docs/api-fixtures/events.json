@@ -1,0 +1,42 @@
+[
+ {
+  "id": 5,
+  "t": 1794255976.615048,
+  "level": "info",
+  "source": "evaluation",
+  "run_id": null,
+  "message": "held-out test split used for xdqn-r11 (confirmatory, 7 scenarios)"
+ },
+ {
+  "id": 4,
+  "t": 1794255968.504319,
+  "level": "info",
+  "source": "registry",
+  "run_id": null,
+  "message": "promoted ppo-r8: {'test_eval_id': 248, 'test_mean': 200.0, 'ood_mean': 126.89333333333333, 'replaced': 'dqn-r3'}"
+ },
+ {
+  "id": 3,
+  "t": 1794255968.4602897,
+  "level": "info",
+  "source": "evaluation",
+  "run_id": null,
+  "message": "held-out test split used for ppo-r8 (confirmatory, 7 scenarios)"
+ },
+ {
+  "id": 2,
+  "t": 1794255957.0298176,
+  "level": "info",
+  "source": "registry",
+  "run_id": null,
+  "message": "promoted dqn-r3: {'test_eval_id': 241, 'test_mean': 200.0, 'ood_mean': 99.54333333333335, 'replaced': None}"
+ },
+ {
+  "id": 1,
+  "t": 1794255956.984629,
+  "level": "info",
+  "source": "evaluation",
+  "run_id": null,
+  "message": "held-out test split used for dqn-r3 (confirmatory, 7 scenarios)"
+ }
+]

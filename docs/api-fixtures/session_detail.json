@@ -1,0 +1,576 @@
+{
+ "id": 1,
+ "profile": "full_research",
+ "objective": "Reduce the catastrophic degradation and seed variance of the DQN control at 150k steps",
+ "budgets": {
+  "max_concurrent": 4,
+  "max_memory_mb": 4096,
+  "max_gpu_mem_mb": 2048,
+  "max_disk_mb": 5120,
+  "run_wall_seconds": 1800,
+  "early_stop_patience": 0,
+  "checkpoint_every": 25000,
+  "description": "Screening plus follow-up stages for hypotheses that earn them.",
+  "steps": 150000,
+  "seeds": 5,
+  "eval_every": 10000,
+  "eval_episodes": 16,
+  "max_experiments": 5,
+  "session_wall_seconds": 7200,
+  "confirm": true
+ },
+ "status": "running",
+ "control": "run",
+ "pid": 156913,
+ "started_at": 1794255999.5750318,
+ "finished_at": null,
+ "experiments_done": 2,
+ "notes": "exp 1 H002 [screening] -> inconclusive\nexp 2 H007 [screening] -> inconclusive",
+ "error": null,
+ "experiments": [
+  {
+   "id": 3,
+   "session_id": 1,
+   "hypothesis_id": "H001",
+   "stage": "screening",
+   "profile": "full_research",
+   "status": "running",
+   "config": {
+    "variant": "double",
+    "stage": "screening",
+    "steps": 150000,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "eval_every": 10000,
+    "eval_episodes": 16,
+    "observations": {
+     "weaknesses": [
+      {
+       "name": "instability",
+       "severity": 3.4,
+       "evidence": "3.4 catastrophic validation drops per run"
+      },
+      {
+       "name": "seed_variance",
+       "severity": 1.4390526551160545,
+       "evidence": "final-policy mean varies across seeds (CV 0.72)"
+      },
+      {
+       "name": "sample_efficiency",
+       "severity": 1.3635166666666665,
+       "evidence": "validation AUC 0.33 vs reference 0.67"
+      },
+      {
+       "name": "generalization",
+       "severity": 1.0,
+       "evidence": "OOD mean 126 vs in-distribution 200"
+      },
+      {
+       "name": "final_performance",
+       "severity": 0.76108,
+       "evidence": "final-policy mean 124 of cap 200"
+      }
+     ],
+     "evidence": {
+      "control_group": "f705b28ee44873aa",
+      "total_steps": 150000,
+      "n_seeds": 5,
+      "final_mean": 123.89200000000001,
+      "auc": 0.33224166666666666,
+      "seed_cv": 0.7195263275580273,
+      "degradations_mean": 3.4,
+      "ppo_auc": 0.6731208333333333,
+      "ppo_final_mean": 188.272
+     },
+     "note": null
+    },
+    "reason": "targets observed weakness(es): instability, final_performance",
+    "variant_source_sha": "1b838107de21",
+    "arms": {
+     "control": [
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "candidate": [
+      29,
+      30,
+      31,
+      32,
+      33
+     ]
+    },
+    "reused": [
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "code_version": "2ae67e4",
+   "started_at": 1794256211.0322201,
+   "finished_at": null,
+   "result": null,
+   "decision": null,
+   "conclusion": null,
+   "error": null,
+   "report_path": null,
+   "hypothesis_title": "Double-DQN targets reduce value overestimation and the collapses it causes",
+   "variant": "double"
+  },
+  {
+   "id": 2,
+   "session_id": 1,
+   "hypothesis_id": "H007",
+   "stage": "screening",
+   "profile": "full_research",
+   "status": "completed",
+   "config": {
+    "variant": "crash_focus",
+    "stage": "screening",
+    "steps": 150000,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "eval_every": 10000,
+    "eval_episodes": 16,
+    "observations": {
+     "weaknesses": [
+      {
+       "name": "instability",
+       "severity": 3.4,
+       "evidence": "3.4 catastrophic validation drops per run"
+      },
+      {
+       "name": "seed_variance",
+       "severity": 1.4390526551160545,
+       "evidence": "final-policy mean varies across seeds (CV 0.72)"
+      },
+      {
+       "name": "sample_efficiency",
+       "severity": 1.3635166666666665,
+       "evidence": "validation AUC 0.33 vs reference 0.67"
+      },
+      {
+       "name": "generalization",
+       "severity": 1.0,
+       "evidence": "OOD mean 126 vs in-distribution 200"
+      },
+      {
+       "name": "final_performance",
+       "severity": 0.76108,
+       "evidence": "final-policy mean 124 of cap 200"
+      }
+     ],
+     "evidence": {
+      "control_group": "f705b28ee44873aa",
+      "total_steps": 150000,
+      "n_seeds": 5,
+      "final_mean": 123.89200000000001,
+      "auc": 0.33224166666666666,
+      "seed_cv": 0.7195263275580273,
+      "degradations_mean": 3.4,
+      "ppo_auc": 0.6731208333333333,
+      "ppo_final_mean": 188.272
+     },
+     "note": null
+    },
+    "reason": "targets observed weakness(es): sample_efficiency, instability",
+    "variant_source_sha": "6052636ba07b",
+    "arms": {
+     "control": [
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "candidate": [
+      23,
+      24,
+      25,
+      26,
+      27
+     ]
+    },
+    "reused": [
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "code_version": "2ae67e4",
+   "started_at": 1794256101.890476,
+   "finished_at": 1794256210.93629,
+   "result": {
+    "validation": "rollout, shapes, finiteness, checkpoint round-trip and smoke run 22 passed",
+    "arms": {
+     "control": {
+      "completed": 5,
+      "launched": 5,
+      "not_completed": {},
+      "final": [
+       200.0,
+       7.3,
+       197.62,
+       22.54,
+       192.0
+      ],
+      "auc": [
+       0.5194375,
+       0.4146666666666667,
+       0.32085416666666666,
+       0.18502083333333336,
+       0.22122916666666664
+      ],
+      "degradations": [
+       2,
+       2,
+       4,
+       4,
+       5
+      ],
+      "wall": [
+       46.52883291244507,
+       45.74221992492676,
+       46.07358002662659,
+       44.06144165992737,
+       44.983898878097534
+      ],
+      "steps_to_50": [
+       60000,
+       70000,
+       70000,
+       90000,
+       60000
+      ],
+      "run_ids": [
+       11,
+       12,
+       13,
+       14,
+       15
+      ]
+     },
+     "candidate": {
+      "completed": 5,
+      "launched": 5,
+      "not_completed": {},
+      "final": [
+       79.14,
+       200.0,
+       9.82,
+       200.0,
+       200.0
+      ],
+      "auc": [
+       0.1165625,
+       0.3373541666666667,
+       0.32235416666666666,
+       0.2813333333333333,
+       0.35708333333333336
+      ],
+      "degradations": [
+       1,
+       1,
+       2,
+       0,
+       0
+      ],
+      "wall": [
+       51.58111906051636,
+       55.099966287612915,
+       53.30728888511658,
+       53.642197132110596,
+       49.51605439186096
+      ],
+      "steps_to_50": [
+       130000,
+       100000,
+       80000,
+       110000,
+       100000
+      ],
+      "run_ids": [
+       23,
+       24,
+       25,
+       26,
+       27
+      ]
+     }
+    },
+    "auc": {
+     "mean_a": 0.2829375,
+     "mean_b": 0.33224166666666666,
+     "diff": -0.04930416666666665,
+     "ci": [
+      -0.18703333333333338,
+      0.0786583333333333
+     ],
+     "rel_diff": -0.14839850510421626,
+     "prob_improvement": 0.44,
+     "n_a": 5,
+     "n_b": 5
+    },
+    "final_mean": {
+     "mean_a": 137.792,
+     "mean_b": 123.89200000000001,
+     "diff": 13.899999999999991,
+     "ci": [
+      -94.62090000000002,
+      115.772
+     ],
+     "rel_diff": 0.11219449197688301,
+     "prob_improvement": 0.6599999999999999,
+     "n_a": 5,
+     "n_b": 5
+    },
+    "wall_ratio": 1.1572481487210373
+   },
+   "decision": "inconclusive",
+   "conclusion": "no significant difference. auc: diff -0.0493 (95% CI -0.187..+0.0787, P(improve)=0.44); final_mean: diff +13.9 (95% CI -94.6..+116, P(improve)=0.66)",
+   "error": null,
+   "report_path": "experiments/reports/exp_0002.md",
+   "hypothesis_title": "Oversampling the last steps before a crash teaches obstacle avoidance sooner",
+   "variant": "crash_focus"
+  },
+  {
+   "id": 1,
+   "session_id": 1,
+   "hypothesis_id": "H002",
+   "stage": "screening",
+   "profile": "full_research",
+   "status": "completed",
+   "config": {
+    "variant": "softtarget",
+    "stage": "screening",
+    "steps": 150000,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "eval_every": 10000,
+    "eval_episodes": 16,
+    "observations": {
+     "weaknesses": [
+      {
+       "name": "instability",
+       "severity": 3.4,
+       "evidence": "3.4 catastrophic validation drops per run"
+      },
+      {
+       "name": "seed_variance",
+       "severity": 1.4390526551160545,
+       "evidence": "final-policy mean varies across seeds (CV 0.72)"
+      },
+      {
+       "name": "sample_efficiency",
+       "severity": 1.3635166666666665,
+       "evidence": "validation AUC 0.33 vs reference 0.67"
+      },
+      {
+       "name": "generalization",
+       "severity": 1.0,
+       "evidence": "OOD mean 126 vs in-distribution 200"
+      },
+      {
+       "name": "final_performance",
+       "severity": 0.76108,
+       "evidence": "final-policy mean 124 of cap 200"
+      }
+     ],
+     "evidence": {
+      "control_group": "f705b28ee44873aa",
+      "total_steps": 150000,
+      "n_seeds": 5,
+      "final_mean": 123.89200000000001,
+      "auc": 0.33224166666666666,
+      "seed_cv": 0.7195263275580273,
+      "degradations_mean": 3.4,
+      "ppo_auc": 0.6731208333333333,
+      "ppo_final_mean": 188.272
+     },
+     "note": null
+    },
+    "reason": "targets observed weakness(es): instability, seed_variance",
+    "variant_source_sha": "6018db7147d6",
+    "arms": {
+     "control": [
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "candidate": [
+      17,
+      18,
+      19,
+      20,
+      21
+     ]
+    },
+    "reused": [
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "code_version": "2ae67e4",
+   "started_at": 1794255999.6229587,
+   "finished_at": 1794256101.7858224,
+   "result": {
+    "validation": "rollout, shapes, finiteness, checkpoint round-trip and smoke run 16 passed",
+    "arms": {
+     "control": {
+      "completed": 5,
+      "launched": 5,
+      "not_completed": {},
+      "final": [
+       200.0,
+       7.3,
+       197.62,
+       22.54,
+       192.0
+      ],
+      "auc": [
+       0.5194375,
+       0.4146666666666667,
+       0.32085416666666666,
+       0.18502083333333336,
+       0.22122916666666664
+      ],
+      "degradations": [
+       2,
+       2,
+       4,
+       4,
+       5
+      ],
+      "wall": [
+       46.52883291244507,
+       45.74221992492676,
+       46.07358002662659,
+       44.06144165992737,
+       44.983898878097534
+      ],
+      "steps_to_50": [
+       60000,
+       70000,
+       70000,
+       90000,
+       60000
+      ],
+      "run_ids": [
+       11,
+       12,
+       13,
+       14,
+       15
+      ]
+     },
+     "candidate": {
+      "completed": 5,
+      "launched": 5,
+      "not_completed": {},
+      "final": [
+       182.1,
+       200.0,
+       200.0,
+       200.0,
+       3.34
+      ],
+      "auc": [
+       0.3618125,
+       0.22585416666666666,
+       0.41854166666666665,
+       0.41552083333333334,
+       0.28275
+      ],
+      "degradations": [
+       2,
+       1,
+       0,
+       0,
+       6
+      ],
+      "wall": [
+       47.483566999435425,
+       47.367961406707764,
+       49.09764003753662,
+       48.543121337890625,
+       46.199259757995605
+      ],
+      "steps_to_50": [
+       70000,
+       120000,
+       90000,
+       90000,
+       60000
+      ],
+      "run_ids": [
+       17,
+       18,
+       19,
+       20,
+       21
+      ]
+     }
+    },
+    "auc": {
+     "mean_a": 0.34089583333333334,
+     "mean_b": 0.33224166666666666,
+     "diff": 0.008654166666666685,
+     "ci": [
+      -0.11730239583333334,
+      0.13281312499999998
+     ],
+     "rel_diff": 0.02604780656650536,
+     "prob_improvement": 0.6,
+     "n_a": 5,
+     "n_b": 5
+    },
+    "final_mean": {
+     "mean_a": 157.08800000000002,
+     "mean_b": 123.89200000000001,
+     "diff": 33.19600000000001,
+     "ci": [
+      -77.38,
+      141.38
+     ],
+     "rel_diff": 0.26794304717011597,
+     "prob_improvement": 0.6200000000000001,
+     "n_a": 5,
+     "n_b": 5
+    },
+    "wall_ratio": 1.0497012949535889
+   },
+   "decision": "inconclusive",
+   "conclusion": "no significant difference. auc: diff +0.00865 (95% CI -0.117..+0.133, P(improve)=0.60); final_mean: diff +33.2 (95% CI -77.4..+141, P(improve)=0.62)",
+   "error": null,
+   "report_path": "experiments/reports/exp_0001.md",
+   "hypothesis_title": "Polyak-averaged targets smooth the moving target and stabilise late training",
+   "variant": "softtarget"
+  }
+ ]
+}

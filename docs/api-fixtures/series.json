@@ -1,0 +1,56 @@
+{
+ "model_a": "xdqn-crash_focus-r22",
+ "model_b": "ppo-r9",
+ "difficulty": "normal",
+ "limit_ticks": 1500,
+ "n": 3,
+ "wins_a": 0,
+ "wins_b": 3,
+ "draws": 0,
+ "mean_score_a": 0.0,
+ "mean_score_b": 32.0,
+ "matches": [
+  {
+   "match_id": 6,
+   "seed": 30000,
+   "winner": 1,
+   "draw": false,
+   "scores": [
+    0,
+    32
+   ],
+   "ticks": [
+    21,
+    1500
+   ]
+  },
+  {
+   "match_id": 7,
+   "seed": 30001,
+   "winner": 1,
+   "draw": false,
+   "scores": [
+    0,
+    32
+   ],
+   "ticks": [
+    21,
+    1500
+   ]
+  },
+  {
+   "match_id": 8,
+   "seed": 30002,
+   "winner": 1,
+   "draw": false,
+   "scores": [
+    0,
+    32
+   ],
+   "ticks": [
+    21,
+    1500
+   ]
+  }
+ ]
+}

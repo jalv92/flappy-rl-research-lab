@@ -1,0 +1,51 @@
+[
+ {
+  "hypothesis_id": "H001",
+  "title": "Double-DQN targets reduce value overestimation and the collapses it causes",
+  "variant": "double",
+  "stage": "screening",
+  "reason": "targets observed weakness(es): instability, final_performance"
+ },
+ {
+  "hypothesis_id": "H004",
+  "title": "Rolling back to the best snapshot and halving the learning rate when training collapses",
+  "variant": "collapse_guard",
+  "stage": "screening",
+  "reason": "targets observed weakness(es): instability, final_performance"
+ },
+ {
+  "hypothesis_id": "H005",
+  "title": "Drawing exploratory actions from a survivor action prior instead of uniformly",
+  "variant": "prior_explore",
+  "stage": "screening",
+  "reason": "targets observed weakness(es): sample_efficiency, seed_variance"
+ },
+ {
+  "hypothesis_id": "H008",
+  "title": "An auxiliary forward-dynamics loss shapes features before reward arrives",
+  "variant": "aux_dynamics",
+  "stage": "screening",
+  "reason": "targets observed weakness(es): sample_efficiency, generalization"
+ },
+ {
+  "hypothesis_id": "H009",
+  "title": "Dueling heads learn state value where the action rarely matters",
+  "variant": "dueling",
+  "stage": "screening",
+  "reason": "targets observed weakness(es): sample_efficiency, final_performance"
+ },
+ {
+  "hypothesis_id": "H003",
+  "title": "3-step returns propagate the sparse obstacle reward faster",
+  "variant": "nstep",
+  "stage": "screening",
+  "reason": "targets observed weakness(es): sample_efficiency"
+ },
+ {
+  "hypothesis_id": "H006",
+  "title": "Prioritising high-TD-error transitions speeds up learning of rare events",
+  "variant": "per",
+  "stage": "screening",
+  "reason": "targets observed weakness(es): sample_efficiency"
+ }
+]

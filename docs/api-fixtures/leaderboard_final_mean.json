@@ -1,0 +1,126 @@
+{
+ "metric": "final_mean",
+ "description": "Mean validation score of the final policy (50 episodes), averaged over seeds",
+ "lower_is_better": false,
+ "benchmark": {
+  "total_steps": 150000,
+  "env_version": "FlapLab-v1/engine1/obs1"
+ },
+ "rows": [
+  {
+   "label": "ppo",
+   "group_key": "164520cc2e04855f",
+   "algo": "ppo",
+   "variant": null,
+   "kind": "baseline",
+   "n_seeds": 5,
+   "value": 188.272,
+   "ci": [
+    172.89600000000002,
+    199.2
+   ],
+   "final_mean": 188.272,
+   "wall_seconds_mean": 31.389649629592896,
+   "run_ids": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "rank": 1
+  },
+  {
+   "label": "xdqn+softtarget",
+   "group_key": "9404a1bd80091306",
+   "algo": "xdqn",
+   "variant": "softtarget",
+   "kind": "experimental",
+   "n_seeds": 5,
+   "value": 157.08800000000002,
+   "ci": [
+    78.424,
+    200.0
+   ],
+   "final_mean": 157.08800000000002,
+   "wall_seconds_mean": 47.738309907913205,
+   "run_ids": [
+    17,
+    18,
+    19,
+    20,
+    21
+   ],
+   "rank": 2
+  },
+  {
+   "label": "xdqn+crash_focus",
+   "group_key": "09d16b297b2474f2",
+   "algo": "xdqn",
+   "variant": "crash_focus",
+   "kind": "experimental",
+   "n_seeds": 5,
+   "value": 137.792,
+   "ci": [
+    61.720000000000006,
+    200.0
+   ],
+   "final_mean": 137.792,
+   "wall_seconds_mean": 52.62932515144348,
+   "run_ids": [
+    23,
+    24,
+    25,
+    26,
+    27
+   ],
+   "rank": 3
+  },
+  {
+   "label": "dqn",
+   "group_key": "8daca29ee3d8aa51",
+   "algo": "dqn",
+   "variant": null,
+   "kind": "baseline",
+   "n_seeds": 5,
+   "value": 124.088,
+   "ci": [
+    48.86,
+    194.908
+   ],
+   "final_mean": 124.088,
+   "wall_seconds_mean": 50.949847555160524,
+   "run_ids": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "rank": 4
+  },
+  {
+   "label": "xdqn",
+   "group_key": "f705b28ee44873aa",
+   "algo": "xdqn",
+   "variant": "control",
+   "kind": "baseline",
+   "n_seeds": 5,
+   "value": 123.89200000000001,
+   "ci": [
+    48.888,
+    197.448
+   ],
+   "final_mean": 123.89200000000001,
+   "wall_seconds_mean": 45.47799468040466,
+   "run_ids": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "rank": 5
+  }
+ ]
+}

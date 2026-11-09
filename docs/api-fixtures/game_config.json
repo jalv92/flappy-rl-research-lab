@@ -1,0 +1,108 @@
+{
+ "engine_version": "1",
+ "modes": {
+  "human": [
+   "human"
+  ],
+  "ai": [
+   "ai"
+  ],
+  "human_vs_ai": [
+   "human",
+   "ai"
+  ],
+  "ai_vs_ai": [
+   "ai",
+   "ai"
+  ]
+ },
+ "difficulties": {
+  "easy": {
+   "tick_rate": 30,
+   "world_height": 512.0,
+   "view_width": 432.0,
+   "bird_x": 96.0,
+   "bird_radius": 12.0,
+   "start_y": 256.0,
+   "gravity": 1200.0,
+   "flap_velocity": 360.0,
+   "max_fall_speed": 540.0,
+   "speed": 125.0,
+   "obstacle_width": 60.0,
+   "obstacle_spacing": 230.0,
+   "first_obstacle_x": 420.0,
+   "gap_min": 150.0,
+   "gap_max": 185.0,
+   "gap_margin": 50.0,
+   "max_gap_shift": 190.0
+  },
+  "normal": {
+   "tick_rate": 30,
+   "world_height": 512.0,
+   "view_width": 432.0,
+   "bird_x": 96.0,
+   "bird_radius": 12.0,
+   "start_y": 256.0,
+   "gravity": 1200.0,
+   "flap_velocity": 360.0,
+   "max_fall_speed": 540.0,
+   "speed": 140.0,
+   "obstacle_width": 60.0,
+   "obstacle_spacing": 210.0,
+   "first_obstacle_x": 420.0,
+   "gap_min": 125.0,
+   "gap_max": 165.0,
+   "gap_margin": 50.0,
+   "max_gap_shift": 190.0
+  },
+  "hard": {
+   "tick_rate": 30,
+   "world_height": 512.0,
+   "view_width": 432.0,
+   "bird_x": 96.0,
+   "bird_radius": 12.0,
+   "start_y": 256.0,
+   "gravity": 1200.0,
+   "flap_velocity": 360.0,
+   "max_fall_speed": 540.0,
+   "speed": 160.0,
+   "obstacle_width": 60.0,
+   "obstacle_spacing": 195.0,
+   "first_obstacle_x": 420.0,
+   "gap_min": 110.0,
+   "gap_max": 140.0,
+   "gap_margin": 50.0,
+   "max_gap_shift": 190.0
+  }
+ },
+ "trained_on": "normal",
+ "observation": {
+  "version": "1",
+  "dim": 12,
+  "names": [
+   "bird_y",
+   "bird_vy",
+   "next_left_dx",
+   "next_right_dx",
+   "next_gap_center",
+   "below_gap_top",
+   "above_gap_bottom",
+   "next_gap_height",
+   "next2_left_dx",
+   "next2_gap_center",
+   "next2_gap_height",
+   "world_speed"
+  ]
+ },
+ "actions": {
+  "0": "do not flap",
+  "1": "flap"
+ },
+ "n_actions": 2,
+ "speed_range": [
+  0.25,
+  16.0
+ ],
+ "default_limit_ticks": 27000,
+ "max_limit_ticks": 108000
+}

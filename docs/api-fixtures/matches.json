@@ -1,0 +1,484 @@
+[
+ {
+  "id": 8,
+  "mode": "ai_vs_ai",
+  "seed": 30002,
+  "difficulty": "normal",
+  "participants": [
+   {
+    "kind": "ai",
+    "label": "xdqn-crash_focus-r22",
+    "model_id": "xdqn-crash_focus-r22",
+    "algo": "xdqn",
+    "variant": "crash_focus",
+    "status": "archived",
+    "train_steps": 3000,
+    "diagnostic": "q_values"
+   },
+   {
+    "kind": "ai",
+    "label": "ppo-r9",
+    "model_id": "ppo-r9",
+    "algo": "ppo",
+    "variant": null,
+    "status": "evaluated",
+    "train_steps": 150000,
+    "diagnostic": "action_probs"
+   }
+  ],
+  "result": {
+   "mode": "ai_vs_ai",
+   "seed": 30002,
+   "difficulty": "normal",
+   "ticks": 1500,
+   "limit_reached": true,
+   "winner": 1,
+   "draw": false,
+   "players": [
+    {
+     "kind": "ai",
+     "label": "xdqn-crash_focus-r22",
+     "model_id": "xdqn-crash_focus-r22",
+     "algo": "xdqn",
+     "variant": "crash_focus",
+     "status": "archived",
+     "train_steps": 3000,
+     "diagnostic": "q_values",
+     "score": 0,
+     "distance": 98.0,
+     "ticks": 21,
+     "flaps": 21,
+     "death": "ceiling",
+     "died_tick": 21
+    },
+    {
+     "kind": "ai",
+     "label": "ppo-r9",
+     "model_id": "ppo-r9",
+     "algo": "ppo",
+     "variant": null,
+     "status": "evaluated",
+     "train_steps": 150000,
+     "diagnostic": "action_probs",
+     "score": 32,
+     "distance": 7000.0,
+     "ticks": 1500,
+     "flaps": 90,
+     "death": null,
+     "died_tick": null
+    }
+   ]
+  },
+  "created_at": 1794256301.7756424
+ },
+ {
+  "id": 7,
+  "mode": "ai_vs_ai",
+  "seed": 30001,
+  "difficulty": "normal",
+  "participants": [
+   {
+    "kind": "ai",
+    "label": "xdqn-crash_focus-r22",
+    "model_id": "xdqn-crash_focus-r22",
+    "algo": "xdqn",
+    "variant": "crash_focus",
+    "status": "archived",
+    "train_steps": 3000,
+    "diagnostic": "q_values"
+   },
+   {
+    "kind": "ai",
+    "label": "ppo-r9",
+    "model_id": "ppo-r9",
+    "algo": "ppo",
+    "variant": null,
+    "status": "evaluated",
+    "train_steps": 150000,
+    "diagnostic": "action_probs"
+   }
+  ],
+  "result": {
+   "mode": "ai_vs_ai",
+   "seed": 30001,
+   "difficulty": "normal",
+   "ticks": 1500,
+   "limit_reached": true,
+   "winner": 1,
+   "draw": false,
+   "players": [
+    {
+     "kind": "ai",
+     "label": "xdqn-crash_focus-r22",
+     "model_id": "xdqn-crash_focus-r22",
+     "algo": "xdqn",
+     "variant": "crash_focus",
+     "status": "archived",
+     "train_steps": 3000,
+     "diagnostic": "q_values",
+     "score": 0,
+     "distance": 98.0,
+     "ticks": 21,
+     "flaps": 20,
+     "death": "ceiling",
+     "died_tick": 21
+    },
+    {
+     "kind": "ai",
+     "label": "ppo-r9",
+     "model_id": "ppo-r9",
+     "algo": "ppo",
+     "variant": null,
+     "status": "evaluated",
+     "train_steps": 150000,
+     "diagnostic": "action_probs",
+     "score": 32,
+     "distance": 7000.0,
+     "ticks": 1500,
+     "flaps": 88,
+     "death": null,
+     "died_tick": null
+    }
+   ]
+  },
+  "created_at": 1794256301.6431417
+ },
+ {
+  "id": 6,
+  "mode": "ai_vs_ai",
+  "seed": 30000,
+  "difficulty": "normal",
+  "participants": [
+   {
+    "kind": "ai",
+    "label": "xdqn-crash_focus-r22",
+    "model_id": "xdqn-crash_focus-r22",
+    "algo": "xdqn",
+    "variant": "crash_focus",
+    "status": "archived",
+    "train_steps": 3000,
+    "diagnostic": "q_values"
+   },
+   {
+    "kind": "ai",
+    "label": "ppo-r9",
+    "model_id": "ppo-r9",
+    "algo": "ppo",
+    "variant": null,
+    "status": "evaluated",
+    "train_steps": 150000,
+    "diagnostic": "action_probs"
+   }
+  ],
+  "result": {
+   "mode": "ai_vs_ai",
+   "seed": 30000,
+   "difficulty": "normal",
+   "ticks": 1500,
+   "limit_reached": true,
+   "winner": 1,
+   "draw": false,
+   "players": [
+    {
+     "kind": "ai",
+     "label": "xdqn-crash_focus-r22",
+     "model_id": "xdqn-crash_focus-r22",
+     "algo": "xdqn",
+     "variant": "crash_focus",
+     "status": "archived",
+     "train_steps": 3000,
+     "diagnostic": "q_values",
+     "score": 0,
+     "distance": 98.0,
+     "ticks": 21,
+     "flaps": 21,
+     "death": "ceiling",
+     "died_tick": 21
+    },
+    {
+     "kind": "ai",
+     "label": "ppo-r9",
+     "model_id": "ppo-r9",
+     "algo": "ppo",
+     "variant": null,
+     "status": "evaluated",
+     "train_steps": 150000,
+     "diagnostic": "action_probs",
+     "score": 32,
+     "distance": 7000.0,
+     "ticks": 1500,
+     "flaps": 94,
+     "death": null,
+     "died_tick": null
+    }
+   ]
+  },
+  "created_at": 1794256301.5129642
+ },
+ {
+  "id": 5,
+  "mode": "ai_vs_ai",
+  "seed": 104,
+  "difficulty": "normal",
+  "participants": [
+   {
+    "kind": "ai",
+    "label": "xdqn-crash_focus-r22",
+    "model_id": "xdqn-crash_focus-r22",
+    "algo": "xdqn",
+    "variant": "crash_focus",
+    "status": "archived",
+    "train_steps": 3000,
+    "diagnostic": "q_values"
+   },
+   {
+    "kind": "ai",
+    "label": "ppo-r9",
+    "model_id": "ppo-r9",
+    "algo": "ppo",
+    "variant": null,
+    "status": "evaluated",
+    "train_steps": 150000,
+    "diagnostic": "action_probs"
+   }
+  ],
+  "result": {
+   "mode": "ai_vs_ai",
+   "seed": 104,
+   "difficulty": "normal",
+   "ticks": 1500,
+   "limit_reached": true,
+   "winner": 1,
+   "draw": false,
+   "players": [
+    {
+     "kind": "ai",
+     "label": "xdqn-crash_focus-r22",
+     "model_id": "xdqn-crash_focus-r22",
+     "algo": "xdqn",
+     "variant": "crash_focus",
+     "status": "archived",
+     "train_steps": 3000,
+     "diagnostic": "q_values",
+     "score": 0,
+     "distance": 98.0,
+     "ticks": 21,
+     "flaps": 21,
+     "death": "ceiling",
+     "died_tick": 21
+    },
+    {
+     "kind": "ai",
+     "label": "ppo-r9",
+     "model_id": "ppo-r9",
+     "algo": "ppo",
+     "variant": null,
+     "status": "evaluated",
+     "train_steps": 150000,
+     "diagnostic": "action_probs",
+     "score": 32,
+     "distance": 7000.0,
+     "ticks": 1500,
+     "flaps": 87,
+     "death": null,
+     "died_tick": null
+    }
+   ]
+  },
+  "created_at": 1794256298.1939774
+ },
+ {
+  "id": 4,
+  "mode": "human_vs_ai",
+  "seed": 103,
+  "difficulty": "normal",
+  "participants": [
+   {
+    "kind": "human",
+    "label": "You",
+    "model_id": null
+   },
+   {
+    "kind": "ai",
+    "label": "ppo-r9",
+    "model_id": "ppo-r9",
+    "algo": "ppo",
+    "variant": null,
+    "status": "evaluated",
+    "train_steps": 150000,
+    "diagnostic": "action_probs"
+   }
+  ],
+  "result": {
+   "mode": "human_vs_ai",
+   "seed": 103,
+   "difficulty": "normal",
+   "ticks": 900,
+   "limit_reached": true,
+   "winner": 1,
+   "draw": false,
+   "players": [
+    {
+     "kind": "human",
+     "label": "You",
+     "model_id": null,
+     "score": 1,
+     "distance": 560.0,
+     "ticks": 120,
+     "flaps": 7,
+     "death": "obstacle",
+     "died_tick": 120
+    },
+    {
+     "kind": "ai",
+     "label": "ppo-r9",
+     "model_id": "ppo-r9",
+     "algo": "ppo",
+     "variant": null,
+     "status": "evaluated",
+     "train_steps": 150000,
+     "diagnostic": "action_probs",
+     "score": 19,
+     "distance": 4200.0,
+     "ticks": 900,
+     "flaps": 50,
+     "death": null,
+     "died_tick": null
+    }
+   ],
+   "personal_best": 1,
+   "new_record": true
+  },
+  "created_at": 1794256294.9746997
+ },
+ {
+  "id": 3,
+  "mode": "ai",
+  "seed": 102,
+  "difficulty": "normal",
+  "participants": [
+   {
+    "kind": "ai",
+    "label": "xdqn-crash_focus-r27",
+    "model_id": "xdqn-crash_focus-r27",
+    "algo": "xdqn",
+    "variant": "crash_focus",
+    "status": "experimental",
+    "train_steps": 150000,
+    "diagnostic": "q_values"
+   }
+  ],
+  "result": {
+   "mode": "ai",
+   "seed": 102,
+   "difficulty": "normal",
+   "ticks": 1200,
+   "limit_reached": true,
+   "winner": null,
+   "draw": false,
+   "players": [
+    {
+     "kind": "ai",
+     "label": "xdqn-crash_focus-r27",
+     "model_id": "xdqn-crash_focus-r27",
+     "algo": "xdqn",
+     "variant": "crash_focus",
+     "status": "experimental",
+     "train_steps": 150000,
+     "diagnostic": "q_values",
+     "score": 25,
+     "distance": 5600.0,
+     "ticks": 1200,
+     "flaps": 83,
+     "death": null,
+     "died_tick": null
+    }
+   ]
+  },
+  "created_at": 1794256264.9551854
+ },
+ {
+  "id": 2,
+  "mode": "ai",
+  "seed": 102,
+  "difficulty": "normal",
+  "participants": [
+   {
+    "kind": "ai",
+    "label": "ppo-r9",
+    "model_id": "ppo-r9",
+    "algo": "ppo",
+    "variant": null,
+    "status": "evaluated",
+    "train_steps": 150000,
+    "diagnostic": "action_probs"
+   }
+  ],
+  "result": {
+   "mode": "ai",
+   "seed": 102,
+   "difficulty": "normal",
+   "ticks": 1200,
+   "limit_reached": true,
+   "winner": null,
+   "draw": false,
+   "players": [
+    {
+     "kind": "ai",
+     "label": "ppo-r9",
+     "model_id": "ppo-r9",
+     "algo": "ppo",
+     "variant": null,
+     "status": "evaluated",
+     "train_steps": 150000,
+     "diagnostic": "action_probs",
+     "score": 25,
+     "distance": 5600.0,
+     "ticks": 1200,
+     "flaps": 65,
+     "death": null,
+     "died_tick": null
+    }
+   ]
+  },
+  "created_at": 1794256262.390652
+ },
+ {
+  "id": 1,
+  "mode": "human",
+  "seed": 101,
+  "difficulty": "normal",
+  "participants": [
+   {
+    "kind": "human",
+    "label": "You",
+    "model_id": null
+   }
+  ],
+  "result": {
+   "mode": "human",
+   "seed": 101,
+   "difficulty": "normal",
+   "ticks": 73,
+   "limit_reached": false,
+   "winner": null,
+   "draw": false,
+   "players": [
+    {
+     "kind": "human",
+     "label": "You",
+     "model_id": null,
+     "score": 0,
+     "distance": 340.6666666666667,
+     "ticks": 73,
+     "flaps": 4,
+     "death": "obstacle",
+     "died_tick": 73
+    }
+   ],
+   "personal_best": 0,
+   "new_record": false
+  },
+  "created_at": 1794256258.9835453
+ }
+]

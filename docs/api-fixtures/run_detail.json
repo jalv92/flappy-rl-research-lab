@@ -1,0 +1,203 @@
+{
+ "id": 9,
+ "kind": "baseline",
+ "algo": "ppo",
+ "variant": null,
+ "seed": 3,
+ "config": {
+  "hyper": {
+   "n_envs": 8,
+   "net_arch": [
+    64,
+    64
+   ],
+   "learning_rate": 0.0003,
+   "n_steps": 256,
+   "batch_size": 256,
+   "n_epochs": 10,
+   "gamma": 0.99,
+   "gae_lambda": 0.95,
+   "clip_range": 0.2,
+   "ent_coef": 0.01,
+   "vf_coef": 0.5,
+   "max_grad_norm": 0.5
+  },
+  "reward": {
+   "pass_obstacle": 1.0,
+   "crash": -1.0,
+   "survive": 0.0,
+   "flap": 0.0
+  },
+  "game": {
+   "tick_rate": 30,
+   "world_height": 512.0,
+   "view_width": 432.0,
+   "bird_x": 96.0,
+   "bird_radius": 12.0,
+   "start_y": 256.0,
+   "gravity": 1200.0,
+   "flap_velocity": 360.0,
+   "max_fall_speed": 540.0,
+   "speed": 140.0,
+   "obstacle_width": 60.0,
+   "obstacle_spacing": 210.0,
+   "first_obstacle_x": 420.0,
+   "gap_min": 125.0,
+   "gap_max": 165.0,
+   "gap_margin": 50.0,
+   "max_gap_shift": 190.0
+  },
+  "max_episode_steps": 5000,
+  "eval_every": 10000,
+  "eval_episodes": 16,
+  "eval_max_score": 200,
+  "checkpoint_every": 25000,
+  "limits": {
+   "max_wall_seconds": 1800,
+   "max_memory_mb": 4096,
+   "max_gpu_mem_mb": 2048,
+   "early_stop_patience": 0
+  },
+  "device": "auto",
+  "torch_threads": 1,
+  "variant_source_sha": "sb3"
+ },
+ "config_key": "5607d7d659369de1",
+ "group_key": "164520cc2e04855f",
+ "profile": "baseline_benchmark",
+ "experiment_id": null,
+ "arm": "baseline",
+ "status": "completed",
+ "stop_requested": 0,
+ "pid": 154952,
+ "steps": 150000,
+ "total_steps": 150000,
+ "created_at": 1794255706.0743425,
+ "started_at": 1794255790.298103,
+ "finished_at": 1794255822.775203,
+ "wall_seconds": 32.42341351509094,
+ "code_version": "2ae67e4",
+ "env_version": "FlapLab-v1/engine1/obs1",
+ "hardware": {
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "cpu_count": 28,
+  "ram_gb": 15.5,
+  "gpu": "NVIDIA GeForce RTX 4070 Ti SUPER",
+  "gpu_mem_gb": 16.0,
+  "packages": {
+   "torch": "2.15.0+cu132",
+   "numpy": "2.5.4",
+   "gymnasium": "1.4.0",
+   "stable_baselines3": "2.9.2"
+  }
+ },
+ "device": "cpu",
+ "checkpoint_dir": "checkpoints/run_00009",
+ "model_id": "ppo-r9",
+ "error": null,
+ "summary": {
+  "run_id": 9,
+  "seed": 3,
+  "status": "completed",
+  "steps": 150000,
+  "wall_seconds": 32.42341351509094,
+  "sps": 4626.286492943902,
+  "curve": [
+   [
+    10000,
+    0.0
+   ],
+   [
+    20000,
+    0.0
+   ],
+   [
+    30000,
+    0.0
+   ],
+   [
+    40000,
+    3.0
+   ],
+   [
+    50000,
+    40.3125
+   ],
+   [
+    60000,
+    200.0
+   ],
+   [
+    70000,
+    173.875
+   ],
+   [
+    80000,
+    200.0
+   ],
+   [
+    90000,
+    183.8125
+   ],
+   [
+    100000,
+    196.0
+   ],
+   [
+    110000,
+    200.0
+   ],
+   [
+    120000,
+    200.0
+   ],
+   [
+    130000,
+    200.0
+   ],
+   [
+    140000,
+    200.0
+   ],
+   [
+    150000,
+    200.0
+   ]
+  ],
+  "final_mean": 200.0,
+  "best_mean": 200.0,
+  "auc": 0.6656666666666666,
+  "degradations": 0,
+  "steps_to": {
+   "10": 50000,
+   "25": 50000,
+   "50": 60000,
+   "100": 60000
+  },
+  "model_id": "ppo-r9"
+ },
+ "metric_keys": [
+  "approx_kl",
+  "clip_fraction",
+  "clip_range",
+  "cpu_percent",
+  "entropy_loss",
+  "ep_len_mean",
+  "ep_return_mean",
+  "ep_score_mean",
+  "episodes",
+  "explained_variance",
+  "gpu_mem_mb",
+  "learning_rate",
+  "loss",
+  "n_updates",
+  "policy_gradient_loss",
+  "rss_mb",
+  "sps",
+  "val_max",
+  "val_mean",
+  "val_median",
+  "value_loss"
+ ]
+}
